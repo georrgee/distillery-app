@@ -1,6 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import CustomerScreen from '../screens/CustomerScreen';
+import BeverageScreen from '../screens/BottlesScreen';
 
 /**
  * Description: The main navigation logic
@@ -20,6 +21,16 @@ const MainStackNavigator = () => {
           headerTransparent: false,
           headerLargeTitle: true,
           headerTitle: 'Welcome',
+        }}
+      />
+
+      <MainStack.Screen
+        name='Beverage'
+        component={BeverageScreen}
+        options={{
+          headerTransparent: false,
+          headerLargeTitle: true,
+          headerTitle: 'Beverages',
         }}
       />
     </MainStack.Navigator>
